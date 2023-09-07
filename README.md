@@ -1,0 +1,1 @@
+# aryzac.io.Modules.Nuxt
