@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="9ea42ab1-fff4-4e33-904a-c5cad4a8610e" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>services</name>
+  <display>services</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</parentFolderId>
+  <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="cc9b0f7a-6352-4785-8ad4-c5c83cd8b491" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Services.ServiceProxy</name>
+      <display>Aryzac.IO.Modules.Nuxt.Services.ServiceProxy</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>9ea42ab1-fff4-4e33-904a-c5cad4a8610e</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

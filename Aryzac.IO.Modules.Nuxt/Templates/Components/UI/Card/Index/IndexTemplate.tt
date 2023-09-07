@@ -1,0 +1,21 @@
+<#@ template language="C#" inherits="IntentTemplateBase<object>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+
+<template>
+  <div>
+    <div v-if="$slots.header" class="px-4 py-5 sm:px-6">
+      <slot name="header" />
+    </div>
+    <div>
+      <slot />
+    </div>
+    <div v-if="$slots.footer" class="px-4 py-4 sm:px-6">
+      <slot name="footer" />
+    </div>
+  </div>
+</template>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a9e9467d-dae5-4869-bc4f-3df1be063a53" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>components</name>
+  <display>components</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</parentFolderId>
+  <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="e66130af-acc1-4ce6-b326-81e8c27ab67e" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.DeleteComponent</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.DeleteComponent</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a9e9467d-dae5-4869-bc4f-3df1be063a53</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="d56e7b70-dd21-475e-a3e2-bdc69f6451d6" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.PostComponent</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.PostComponent</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a9e9467d-dae5-4869-bc4f-3df1be063a53</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="b2e57d05-219a-4da3-96d4-c2fbf8667828" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.PutPatchComponent</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.PutPatchComponent</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a9e9467d-dae5-4869-bc4f-3df1be063a53</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="b28a1342-8ae2-4e38-8753-35a7d510285b" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.GetMany.IndexComponent</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.GetMany.IndexComponent</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a9e9467d-dae5-4869-bc4f-3df1be063a53</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="b3f1e6ad-15cc-48d2-8144-d65beee4402c" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.GetMany.ListComponent</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.GetMany.ListComponent</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a9e9467d-dae5-4869-bc4f-3df1be063a53</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="af13e260-240e-44a8-8979-0fb50ff833b7" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.GetMany.ListItemComponent</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.GetMany.ListItemComponent</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a9e9467d-dae5-4869-bc4f-3df1be063a53</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

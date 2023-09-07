@@ -1,0 +1,59 @@
+<#@ template language="C#" inherits="IntentTemplateBase<object>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+
+<script setup lang="ts">
+import constrainedToBreakpointWithPaddedContent from './constrained-to-breakpoint-with-padded-content.vue';
+import constrainedWithPaddedContent from './constrained-with-padded-content.vue';
+import fullWidthOnMobileConstrainedToBreakpointWithPaddedContentAboveMobile from './full-width-on-mobile-constrained-to-breakpoint-with-padded-content-above-mobile.vue';
+import fullWidthOnMobileConstrainedWithPaddedContentAbove from './full-width-on-mobile-constrained-with-padded-content-above.vue';
+import narrowConstrainedWithPaddedContent from './narrow-constrained-with-padded-content.vue';
+
+const props = defineProps({
+    type: {
+        type: String,
+        default: 'constrainedToBreakpoint',
+        validator: value => {
+            return [
+                'constrainedToBreakpoint',
+                'constrained',
+                'fullWidthOnMobileConstrainedToBreakpoint',
+                'fullWidthOnMobileConstrained',
+                'narrowConstrained'
+            ].includes(value);
+        }
+    }
+});
+
+const Container = ref(null);
+
+switch (props.type) {
+    case 'constrainedToBreakpoint':
+        Container.value = constrainedToBreakpointWithPaddedContent;
+        break;
+    case 'constrained':
+        Container.value = constrainedWithPaddedContent;
+        break;
+    case 'fullWidthOnMobileConstrainedToBreakpoint':
+        Container.value = fullWidthOnMobileConstrainedToBreakpointWithPaddedContentAboveMobile;
+        break;
+    case 'fullWidthOnMobileConstrained':
+        Container.value = fullWidthOnMobileConstrainedWithPaddedContentAbove;
+        break;
+    case 'narrowConstrained':
+        Container.value = narrowConstrainedWithPaddedContent;
+        break;
+    default:
+        throw new Error(`Unsupported container type: ${props.type}`);
+}
+</script>
+
+<template>
+    <component :is="Container">
+        <slot />
+    </component>
+</template>

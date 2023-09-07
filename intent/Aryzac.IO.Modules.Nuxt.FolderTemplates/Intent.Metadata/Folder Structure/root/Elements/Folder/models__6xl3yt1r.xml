@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="541e2864-6943-41a7-8da1-8f518c5ef7ef" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>models</name>
+  <display>models</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f031fc5c-f82a-4eb0-8070-960ea3d37791</parentFolderId>
+  <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="c84c253e-c89a-4eea-bbe0-b3c50f396234" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Structs.DTOs.DTO</name>
+      <display>Aryzac.IO.Modules.Nuxt.Structs.DTOs.DTO</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>541e2864-6943-41a7-8da1-8f518c5ef7ef</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="49c7528f-d546-4131-a389-10a40e520089" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Structs.DTOs.JsonResponse</name>
+      <display>Aryzac.IO.Modules.Nuxt.Structs.DTOs.JsonResponse</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>541e2864-6943-41a7-8da1-8f518c5ef7ef</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

@@ -1,0 +1,36 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  runtimeConfig: {
+    apiBaseUri: '', // Default to an empty string, automatically set at runtime using process.env.NUXT_API_BASE_URI
+    public: {
+    }
+  },
+  devtools: { enabled: true },
+  extends: [
+    // https://nuxt.com/modules/seo-kit
+    'nuxt-seo-kit'
+  ],
+  modules: [
+    // https://content.nuxtjs.org/get-started
+    '@nuxt/content',
+    // https://nuxt.com/modules/image
+    '@nuxt/image',
+    // https://nuxt.com/modules/icon
+    'nuxt-icon',
+    // https://nuxt.com/modules/color-mode
+    '@nuxtjs/color-mode',
+    // https://nuxt.com/modules/i18n
+    '@nuxtjs/i18n',
+    // https://tailwindcss.nuxtjs.org/getting-started
+    '@nuxtjs/tailwindcss'
+  ],
+  colorMode: {
+    classSuffix: ''
+  },
+  tailwindcss: {
+    config: {
+      darkMode: 'class',
+      plugins: [require('@tailwindcss/forms')],
+    }
+  },
+})

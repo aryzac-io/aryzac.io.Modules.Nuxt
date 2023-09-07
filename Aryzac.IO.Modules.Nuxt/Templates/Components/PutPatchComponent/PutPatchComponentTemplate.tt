@@ -1,0 +1,96 @@
+<#@ template language="C#" inherits="IntentTemplateBase<Intent.Modelers.Types.ServiceProxies.Api.OperationModel>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+<#@ import namespace="Intent.Modelers.Types.ServiceProxies.Api" #>
+<#@ import namespace="Intent.Modules.Metadata.WebApi.Models" #>
+<#
+    var endpoint = GetEndpoint();
+#>
+<script setup lang="ts">
+<# 
+    if (endpoint.Inputs.FirstOrDefault(x => x.Source == HttpInputSource.FromBody) != null) 
+    { 
+        var bodyParam = endpoint.Inputs.First(x => x.Source == HttpInputSource.FromBody);
+#>
+import { <#= GetBodyClassName() #> } from '~/structs/models/<#= GetServiceName() #>/<#= GetDTOModelName() #>.dto';
+<# 
+    } 
+#>
+
+const props = withDefaults(defineProps<{
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromRoute)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromHeader)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromQuery)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+<# 
+    if (endpoint.Inputs.FirstOrDefault(x => x.Source == HttpInputSource.FromBody) != null) 
+    { 
+#>
+    command: <#= GetBodyClassName() #>,
+<# 
+    } 
+#>
+    sectionTitle: string,
+    sectionDescription: string,
+}>(), {
+    sectionTitle: '<#= GetServiceProxyMethodNameForTitle() #>',
+    sectionDescription: '<#= GetServiceProxyMethodCommentForDescription() #>',
+});
+
+const <#= GetComposableServiceName().ToCamelCase() #>Proxy = use<#= GetComposableServiceName().ToPascalCase() #>Proxy();
+
+const <#= GetBodyClassName().ToCamelCase() #> = async (<#= GetInputsWithTypes() #>) => {
+    await <#= GetComposableServiceName().ToCamelCase() #>Proxy.<#= GetServiceProxyMethodName() #>(<#= GetInputs() #>);
+}
+</script>
+
+<template>
+
+    <ui-editor-section :title="sectionTitle"
+                       :description="sectionDescription">
+
+<# 
+    foreach (var dtoField in GetDTOModelFields()) 
+    { 
+#>
+        <ui-input-textbox v-model="command.<#= dtoField.Name.ToCamelCase() #>"
+                          label="<#= dtoField.Comment ?? dtoField.Name.ToSentenceCase() #>" />
+
+<# 
+    } 
+#>
+        <template #actions>
+            <button type="button"
+                    class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+            <button type="button"
+                    @click="<#= GetBodyClassName().ToCamelCase() #>(<#= GetInputs() #>)"
+                    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+        </template>
+
+    </ui-editor-section>
+
+</template>

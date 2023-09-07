@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<outputLog>
+  <ApplicationId>135beeb0-3390-4aea-bf0e-8c593c1a3179</ApplicationId>
+  <FileLogs>
+    <FileLog>
+      <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#6a147781-4a18-48d6-967a-1ef20583d1b1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>../../Aryzac.IO.Modules.Nuxt.sln</ApplicationRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c6e235c8-b532-4a59-b296-0b70e2b01ee1</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#c6e235c8-b532-4a59-b296-0b70e2b01ee1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>../../Aryzac.IO.Nuxt/Aryzac.IO.Nuxt.csproj</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Aryzac.IO.Nuxt.csproj</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c6e235c8-b532-4a59-b296-0b70e2b01ee1</ProjectId>
+      <CorrelationId>Intent.ApplicationTemplate.Builder.Templates.IatSpecFile#0676b190-bc93-4a5f-b106-86b4f30ec78b</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>../../Aryzac.IO.Nuxt/Nuxt Application/metadata.iatspec</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Nuxt Application/metadata.iatspec</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+  </FileLogs>
+</outputLog>

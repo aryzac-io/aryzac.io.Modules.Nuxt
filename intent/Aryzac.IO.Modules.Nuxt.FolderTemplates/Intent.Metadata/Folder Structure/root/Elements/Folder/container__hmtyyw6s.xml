@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="afdb4be2-0060-4325-86ab-d50e9eebf727" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>container</name>
+  <display>container</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>0b4f0f8d-613c-4289-a679-84273d0737ff</parentFolderId>
+  <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="b013f923-4c88-43a2-a6f9-746a354575b4" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.UI.Container.BreakpointPadded</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.UI.Container.BreakpointPadded</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>afdb4be2-0060-4325-86ab-d50e9eebf727</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="13fbaf08-c289-4643-96db-6fbf00292811" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.UI.Container.ConstrainedPadded</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.UI.Container.ConstrainedPadded</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>afdb4be2-0060-4325-86ab-d50e9eebf727</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="ea947f66-5cd3-49bf-8be2-84d051464c09" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.UI.Container.Index</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.UI.Container.Index</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>afdb4be2-0060-4325-86ab-d50e9eebf727</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="5c122afa-f2fc-46ac-af31-953956e8c4ab" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.UI.Container.MobileFullBreakpointPadded</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.UI.Container.MobileFullBreakpointPadded</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>afdb4be2-0060-4325-86ab-d50e9eebf727</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="d0e4b7ab-ed1c-4d5e-a305-73004400b53a" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.UI.Container.MobileFullConstrainedPadded</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.UI.Container.MobileFullConstrainedPadded</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>afdb4be2-0060-4325-86ab-d50e9eebf727</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="b24ff369-11db-4752-9bb1-2c879036818f" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.IO.Modules.Nuxt.Components.UI.Container.NarrowConstrainedPadded</name>
+      <display>Aryzac.IO.Modules.Nuxt.Components.UI.Container.NarrowConstrainedPadded</display>
+      <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>afdb4be2-0060-4325-86ab-d50e9eebf727</parentFolderId>
+      <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

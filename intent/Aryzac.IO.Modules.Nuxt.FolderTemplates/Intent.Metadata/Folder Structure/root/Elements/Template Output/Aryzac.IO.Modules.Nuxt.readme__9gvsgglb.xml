@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a2fc2889-eb09-4b92-9ae1-ce9aaea8e784" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+  <name>Aryzac.IO.Modules.Nuxt.readme</name>
+  <display>Aryzac.IO.Modules.Nuxt.readme</display>
+  <externalReference>Aryzac.IO.Modules.Nuxt</externalReference>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</parentFolderId>
+  <packageId>23e9ee1b-ab32-4f6f-9ce6-3506c2c14706</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata>
+    <entry key="status" value="assigned" />
+  </metadata>
+  <childElements />
+</class>

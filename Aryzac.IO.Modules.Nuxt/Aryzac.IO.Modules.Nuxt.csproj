@@ -1,0 +1,707 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Update="Templates\Package\PackageTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>PackageTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\NuxtConfig\NuxtConfigTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NuxtConfigTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Gitignore\GitignoreTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>GitignoreTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Server\Api\ApiServiceProxy\ApiServiceProxyTemplate.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>ApiServiceProxyTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Tsconfig\TsconfigTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>TsconfigTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Readme\ReadmeTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ReadmeTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\layouts\Default2\Default2Template.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Default2Template.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Default\DefaultTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>DefaultTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\layouts\Default\DefaultTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>DefaultTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\server\Tsconfig\TsconfigTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>TsconfigTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\pages\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\structs\Navigation\NavigationTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NavigationTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\composables\UseDebug\UseDebugTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseDebugTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\composables\UseDefaultNavigation\UseDefaultNavigationTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseDefaultNavigationTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\composables\UseNavigation\UseNavigationTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseNavigationTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\composables\UseSidebar\UseSidebarTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseSidebarTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\components\ui\container\ConstrainedToBreakpointWithPaddedContent\ConstrainedToBreakpointWithPaddedContentTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ConstrainedToBreakpointWithPaddedContentTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\components\ui\container\ConstrainedWithPaddedContent\ConstrainedWithPaddedContentTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ConstrainedWithPaddedContentTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\components\ui\container\FullWidthOnMobileConstrainedWithPaddedContentAbove\FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\components\ui\container\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\components\ui\card\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\components\ui\container\NarrowConstrainedWithPaddedContent\NarrowConstrainedWithPaddedContentTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NarrowConstrainedWithPaddedContentTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\ConstrainedToBreakpointWithPaddedContent\ConstrainedToBreakpointWithPaddedContentTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ConstrainedToBreakpointWithPaddedContentTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\ConstrainedWithPaddedContent\ConstrainedWithPaddedContentTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ConstrainedWithPaddedContentTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Layouts\Default\DefaultTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>DefaultTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\FullWidthOnMobileConstrainedWithPaddedContentAbove\FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Pages\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Card\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\NarrowConstrainedWithPaddedContent\NarrowConstrainedWithPaddedContentTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NarrowConstrainedWithPaddedContentTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Structs\Navigation\NavigationTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NavigationTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Server\Tsconfig\TsconfigTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>TsconfigTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Composables\UseDebug\UseDebugTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseDebugTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Composables\UseDefaultNavigation\UseDefaultNavigationTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseDefaultNavigationTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Composables\UseNavigation\UseNavigationTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseNavigationTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Composables\UseSidebar\UseSidebarTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseSidebarTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\BreakpointPadded\BreakpointPaddedTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>BreakpointPaddedTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\ConstrainedPadded\ConstrainedPaddedTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ConstrainedPaddedTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\MobileFullBreakpointPadded\MobileFullBreakpointPaddedTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>MobileFullBreakpointPaddedTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\MobileFullConstrainedPadded\MobileFullConstrainedPaddedTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>MobileFullConstrainedPaddedTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Container\NarrowConstrainedPadded\NarrowConstrainedPaddedTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NarrowConstrainedPaddedTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\CheckBox\CheckBoxTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>CheckBoxTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Editor\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\Post\PostTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>PostTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\RadioBox\RadioBoxTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>RadioBoxTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Editor\Section\SectionTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SectionTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\Select\SelectTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SelectTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\TextArea\TextAreaTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>TextAreaTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\TextBox\TextBoxTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>TextBoxTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Columns\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\Layout\SideBar\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\Layout\AppBar\Index\IndexTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>IndexTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\Layout\SideBar\Navigation\NavigationTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NavigationTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\Layout\SideBar\Section\SectionTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SectionTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\Checkbox\CheckboxTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>CheckboxTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\RadioButton\RadioButtonTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>RadioButtonTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Components\UI\Input\Textbox\TextboxTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>TextboxTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Composables\Proxies\UseServiceProxy\UseServiceProxyTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseServiceProxyTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Structs\DTOs\DTO\DTOTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>DTOTemplate.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Composables\Proxies\UseServiceProxy2\UseServiceProxy2Template.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>UseServiceProxy2Template.tt</DependentUpon>
+		</Compile>
+		<Compile Update="Templates\Structs\DTOs\JsonResponse\JsonResponseTemplate.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>JsonResponseTemplate.tt</DependentUpon>
+		</Compile>
+    <Compile Update="Templates\Composables\Proxies\UseServices\UseServicesTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UseServicesTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Server\ApiServiceProxy\ApiServiceProxyTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ApiServiceProxyTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\Component\ComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ComponentTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\DeleteComponent\DeleteComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DeleteComponentTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\GetManyComponent\GetManyComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GetManyComponentTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\PostComponent\PostComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PostComponentTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\PutPatchComponent\PutPatchComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PutPatchComponentTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Composables\UseServices\UseServicesTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UseServicesTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\UI\View\Index\IndexTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IndexTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\UI\View\List\ListTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ListTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\UI\View\Table\TableTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TableTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\GetMany\IndexComponent\IndexComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IndexComponentTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\GetMany\ListComponent\ListComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ListComponentTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Components\GetMany\ListItemComponent\ListItemComponentTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ListItemComponentTemplate.tt</DependentUpon>
+    </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Templates\Package\PackageTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>PackageTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\NuxtConfig\NuxtConfigTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>NuxtConfigTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Gitignore\GitignoreTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>GitignoreTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Tsconfig\TsconfigTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>TsconfigTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Readme\ReadmeTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>ReadmeTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\layouts\Default\DefaultTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>DefaultTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\layouts\Default2\Default2Template.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>Default2Template.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Default\DefaultTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>DefaultTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\server\Tsconfig\TsconfigTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>TsconfigTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\pages\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\structs\Navigation\NavigationTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>NavigationTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\composables\UseDebug\UseDebugTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseDebugTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\composables\UseDefaultNavigation\UseDefaultNavigationTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseDefaultNavigationTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\composables\UseNavigation\UseNavigationTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseNavigationTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\composables\UseSidebar\UseSidebarTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseSidebarTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\components\ui\container\ConstrainedToBreakpointWithPaddedContent\ConstrainedToBreakpointWithPaddedContentTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>ConstrainedToBreakpointWithPaddedContentTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\components\ui\container\ConstrainedWithPaddedContent\ConstrainedWithPaddedContentTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>ConstrainedWithPaddedContentTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\components\ui\container\FullWidthOnMobileConstrainedWithPaddedContentAbove\FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\components\ui\container\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\components\ui\card\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\components\ui\container\NarrowConstrainedWithPaddedContent\NarrowConstrainedWithPaddedContentTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>NarrowConstrainedWithPaddedContentTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\ConstrainedToBreakpointWithPaddedContent\ConstrainedToBreakpointWithPaddedContentTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>ConstrainedToBreakpointWithPaddedContentTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\ConstrainedWithPaddedContent\ConstrainedWithPaddedContentTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>ConstrainedWithPaddedContentTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Layouts\Default\DefaultTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>DefaultTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\FullWidthOnMobileConstrainedWithPaddedContentAbove\FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>FullWidthOnMobileConstrainedWithPaddedContentAboveTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Pages\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Card\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\NarrowConstrainedWithPaddedContent\NarrowConstrainedWithPaddedContentTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>NarrowConstrainedWithPaddedContentTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Structs\Navigation\NavigationTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>NavigationTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Server\Tsconfig\TsconfigTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>TsconfigTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Composables\UseDebug\UseDebugTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseDebugTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Composables\UseDefaultNavigation\UseDefaultNavigationTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseDefaultNavigationTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Composables\UseNavigation\UseNavigationTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseNavigationTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Composables\UseSidebar\UseSidebarTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseSidebarTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\BreakpointPadded\BreakpointPaddedTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>BreakpointPaddedTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\ConstrainedPadded\ConstrainedPaddedTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>ConstrainedPaddedTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\MobileFullBreakpointPadded\MobileFullBreakpointPaddedTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>MobileFullBreakpointPaddedTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\MobileFullConstrainedPadded\MobileFullConstrainedPaddedTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>MobileFullConstrainedPaddedTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Container\NarrowConstrainedPadded\NarrowConstrainedPaddedTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>NarrowConstrainedPaddedTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\CheckBox\CheckBoxTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>CheckBoxTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Editor\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\Post\PostTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>PostTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\RadioBox\RadioBoxTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>RadioBoxTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Editor\Section\SectionTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>SectionTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\Select\SelectTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>SelectTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\TextArea\TextAreaTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>TextAreaTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\TextBox\TextBoxTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>TextBoxTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Columns\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\Layout\SideBar\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\Layout\AppBar\Index\IndexTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>IndexTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\Layout\SideBar\Navigation\NavigationTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>NavigationTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\Layout\SideBar\Section\SectionTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>SectionTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\Checkbox\CheckboxTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>CheckboxTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\RadioButton\RadioButtonTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>RadioButtonTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Components\UI\Input\Textbox\TextboxTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>TextboxTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Composables\Proxies\UseServiceProxy\UseServiceProxyTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseServiceProxyTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Structs\DTOs\DTO\DTOTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>DTOTemplate.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Composables\Proxies\UseServiceProxy2\UseServiceProxy2Template.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>UseServiceProxy2Template.cs</LastGenOutput>
+		</None>
+		<None Update="Templates\Structs\DTOs\JsonResponse\JsonResponseTemplate.tt">
+			<Generator>TextTemplatingFilePreprocessor</Generator>
+			<LastGenOutput>JsonResponseTemplate.cs</LastGenOutput>
+		</None>
+    <None Update="Templates\Composables\Proxies\UseServices\UseServicesTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UseServicesTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Server\Api\ApiServiceProxy\ApiServiceProxyTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ApiServiceProxyTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Server\ApiServiceProxy\ApiServiceProxyTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ApiServiceProxyTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\Component\ComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ComponentTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\DeleteComponent\DeleteComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DeleteComponentTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\GetManyComponent\GetManyComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>GetManyComponentTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\PostComponent\PostComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>PostComponentTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\PutPatchComponent\PutPatchComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>PutPatchComponentTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Composables\UseServices\UseServicesTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UseServicesTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\UI\View\Index\IndexTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>IndexTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\UI\View\List\ListTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ListTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\UI\View\Table\TableTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TableTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\GetMany\IndexComponent\IndexComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>IndexComponentTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\GetMany\ListComponent\ListComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ListComponentTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Components\GetMany\ListItemComponent\ListItemComponentTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ListItemComponentTemplate.cs</LastGenOutput>
+    </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Intent.Modules.Common" Version="3.4.3" />
+		<PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.4.3" />
+		<PackageReference Include="Intent.Modules.Metadata.WebApi" Version="4.1.1" />
+		<PackageReference Include="Intent.Modules.Modelers.Services" Version="3.4.7" />
+		<PackageReference Include="Intent.Modules.Modelers.Types.ServiceProxies" Version="5.0.0" />
+		<PackageReference Include="Intent.Modules.Modelers.WebClient" Version="4.0.0" />
+		<PackageReference Include="Intent.Packager" Version="3.4.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Intent.RoslynWeaver.Attributes" Version="2.0.1" />
+		<PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.4.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,90 @@
+<#@ template language="C#" inherits="IntentTemplateBase<Intent.Modelers.Types.ServiceProxies.Api.OperationModel>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+<#@ import namespace="Intent.Modelers.Types.ServiceProxies.Api" #>
+<#@ import namespace="Intent.Modules.Metadata.WebApi.Models" #>
+<#
+    var endpoint = GetEndpoint();
+#>
+<script setup lang="ts">
+import { <#= GetResponseClassName() #> } from '~/structs/models/<#= GetServiceName() #>/<#= GetDTOModelName() #>.dto';
+
+const props = withDefaults(defineProps<{
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromRoute)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromHeader)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromQuery)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+    data: <#= GetResponseClassName() #>[],
+    pending: boolean;
+    navigateToPath: string
+}>(), {
+    navigateToPath: '/'
+});
+
+const viewsConfig = [
+  {
+    name: "list",
+    label: "List",
+    icon: "heroicons:list-bullet",
+  },
+];
+
+const actionsConfig = [
+  {
+    label: "Add New",
+    icon: "heroicons:plus",
+    function: async () => {
+      await navigateTo("/prompts/create");
+    },
+  },
+];
+
+const <#= GetComposableServiceName().ToCamelCase() #>Proxy = use<#= GetComposableServiceName().ToPascalCase() #>Proxy();
+
+// Navigate to the given URL
+const navigate = async (e) => {
+    await navigateTo(`${props.navigateToPath}/${e.item.id}`);
+}
+</script>
+
+<template>
+
+    <ui-view
+        :config="viewsConfig"
+        :actions="actionsConfig"
+        :items="data"
+        :loading="pending"
+    >
+        <template #list="{ items }">
+            <<#= GetServicePath() #>-<#= Model.Name.ToKebabCase() #>-list 
+              :items="items"
+              :navigate-to-path="navigateToPath"
+            />
+        </template>
+    </ui-view> 
+
+</template>

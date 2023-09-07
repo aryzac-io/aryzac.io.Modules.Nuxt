@@ -1,0 +1,86 @@
+<#@ template language="C#" inherits="IntentTemplateBase<object>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+<script setup>
+// Props definition
+const props = defineProps({
+    items: {
+        type: Array,
+        default: () => []
+    },
+    headers: {
+        type: Array,
+        default: () => []
+    },
+    key: {
+        type: [String, Function],
+        default: null,
+    }
+});
+
+const getKey = (item, index) => {
+    if (typeof key.value === 'function') {
+        return key.value(item);
+    } else if (typeof key.value === 'string' && item[key.value] !== undefined) {
+        return item[key.value];
+    } else {
+        console.warn(`A valid key could not be determined for the table item at index ${index}. Falling back to index. Consider providing a valid key prop.`);
+        return index;
+    }
+}
+</script>
+
+<template>
+    <div class="mt-8 flow-root">
+        <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                <table class="min-w-full divide-y divide-gray-300">
+                    <thead>
+                        <tr>
+                            <th v-for="header in headers"
+                                :key="header.key"
+                                class="py-3.5 px-3 text-left text-sm font-semibold text-gray-900">
+                                {{ header.label }}
+                            </th>
+                            <th scope="col"
+                                class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                                <span class="sr-only">Edit</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr v-for="(item, index) in items"
+                            :key="getKey(item, index)">
+                            <td v-for="header in headers"
+                                :key="header.key"
+                                class="whitespace-nowrap px-3 py-4 text-sm">
+                                <template v-if="header.template">
+                                    <slot :name="header.template"
+                                          :item="item" />
+                                </template>
+                                <template v-else>
+                                    {{ item[header.key] }}
+                                </template>
+                            </td>
+                            <td
+                                class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                                <a href="#"
+                                   class="text-indigo-600 hover:text-indigo-900">
+                                    Edit<span class="sr-only">, {{ getKey(item,
+                                        index) }}</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
+  
+  
+  

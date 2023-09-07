@@ -1,0 +1,20 @@
+<#@ template language="C#" inherits="IntentTemplateBase<object>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+
+export const useSidebar = () => {
+    const sidebarOpen = useState<boolean>('sidebarOpen', () => false);
+
+    const openSidebar = () => {
+        sidebarOpen.value = true;
+    }
+    const closeSidebar = () => {
+        sidebarOpen.value = false;
+    }
+
+    return { sidebarOpen, openSidebar, closeSidebar };
+}

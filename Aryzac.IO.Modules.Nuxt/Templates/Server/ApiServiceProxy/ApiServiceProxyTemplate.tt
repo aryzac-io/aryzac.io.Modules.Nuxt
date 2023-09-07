@@ -1,0 +1,78 @@
+<#@ template language="C#" inherits="IntentTemplateBase<Intent.Modelers.Types.ServiceProxies.Api.OperationModel>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+<#@ import namespace="Intent.Modelers.Types.ServiceProxies.Api" #>
+<#@ import namespace="Intent.Modules.Metadata.WebApi.Models" #>
+<#
+    var endpoint = GetEndpoint();
+#>
+export default defineEventHandler(async (event) => {
+    const config = useRuntimeConfig();
+<# 
+    foreach (var routeParameter in GetEndpointRouteParameters())
+    {
+#>
+    const <#= routeParameter #> = getRouterParam(event, '<#= routeParameter #>');
+<# 
+    } 
+
+    // Include query parameters
+    foreach (var queryParameter in GetEndpointQueryParameters())
+    {
+#>
+    const <#= queryParameter #> = getQueryParameter(event, '<#= queryParameter #>');
+<#
+    }
+
+    // Include header parameters
+    var headerParameters = GetEndpointHeaderParameters();
+#>
+    const headers = {
+        'Content-Type': 'application/json',
+<# 
+    foreach (var headerParameter in headerParameters)
+    {
+#>
+        '<#= headerParameter #>': getHeaderParameter(event, '<#= headerParameter #>'),
+<#
+    }
+#>
+    };
+
+<# 
+    if (endpoint.Inputs.FirstOrDefault(x => x.Source == HttpInputSource.FromBody) != null) 
+    { 
+#>
+    const body = await readBody(event);
+<# 
+    } 
+#>
+    let url = `/<#= endpoint.Route.Replace("{", "${") #>`;
+<#
+    if (GetEndpointQueryParameters().Any())
+    {
+        var queryParams = string.Join("&", GetEndpointQueryParameters().Select(p => $"{p}=${{{p}}}"));
+#>
+    url += `?<#= queryParams #>`;
+<#
+    }
+#>
+    var response = await $fetch(`${config.apiBaseUri}${url}`, {
+        method: '<#= endpoint.Verb.ToString().ToUpper() #>',
+        headers,
+<# 
+    if (endpoint.Inputs.FirstOrDefault(x => x.Source == HttpInputSource.FromBody) != null) 
+    { 
+        var bodyParam = endpoint.Inputs.First(x => x.Source == HttpInputSource.FromBody);
+#>
+        body,
+<# 
+    } 
+#>
+    });
+    return response;
+});

@@ -1,0 +1,15 @@
+<#@ template language="C#" inherits="IntentTemplateBase<object>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+
+<template>
+  <div class="rounded-md bg-gray-100 p-6">
+    <div class="space-y-10 gap-x-8 gap-y-8 divide-y divide-gray-900/10">
+      <slot />
+    </div>
+  </div>
+</template>

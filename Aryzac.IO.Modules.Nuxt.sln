@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Aryzac.IO.Modules.Nuxt", "Aryzac.IO.Modules.Nuxt\Aryzac.IO.Modules.Nuxt.csproj", "{592466DA-F8AF-4BA3-BDF3-0DFB22DF834E}"
+EndProject
+Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Aryzac.IO.Nuxt", "Aryzac.IO.Nuxt\Aryzac.IO.Nuxt.csproj", "{C6E235C8-B532-4A59-B296-0B70E2B01EE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{592466DA-F8AF-4BA3-BDF3-0DFB22DF834E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592466DA-F8AF-4BA3-BDF3-0DFB22DF834E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592466DA-F8AF-4BA3-BDF3-0DFB22DF834E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592466DA-F8AF-4BA3-BDF3-0DFB22DF834E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E235C8-B532-4A59-B296-0B70E2B01EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E235C8-B532-4A59-B296-0B70E2B01EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E235C8-B532-4A59-B296-0B70E2B01EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E235C8-B532-4A59-B296-0B70E2B01EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,65 @@
+<#@ template language="C#" inherits="IntentTemplateBase<Intent.Modelers.Types.ServiceProxies.Api.OperationModel>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+<#@ import namespace="Intent.Modelers.Types.ServiceProxies.Api" #>
+<#@ import namespace="Intent.Modules.Metadata.WebApi.Models" #>
+<#
+    var endpoint = GetEndpoint();
+#>
+<script setup lang="ts">
+import { <#= GetResponseClassName() #> } from '~/structs/models/<#= GetServiceName() #>/<#= GetDTOModelName() #>.dto';
+
+const props = withDefaults(defineProps<{
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromRoute)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromHeader)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+<# 
+    foreach (var input in endpoint.Inputs.Where(x => x.Source == HttpInputSource.FromQuery)) 
+    { 
+#>
+    <#= GetInputName(input) #>: <#= this.GetTypeName(GetInputType(input)) #>,
+<# 
+    } 
+#>
+    item: <#= GetResponseClassName() #>,
+}>(), {
+});
+</script>
+
+<template>
+
+    <div class="min-w-0 flex-auto">
+        <div class="flex items-start gap-x-3">
+            <p class="text-sm font-semibold leading-6 text-gray-900">{{
+                item.name }}</p>
+        </div>
+        <div
+            class="mt-1 flex items-center gap-x-2 text-xs leading-5 text-gray-500">
+            <p class="whitespace-nowrap">{{ item.description }}</p>
+        </div>
+    </div>
+    <div class="flex flex-none items-center gap-x-4">
+        <!-- Chevron Right Icon -->
+        <icon name="heroicons:chevron-right-20-solid"
+                class="h-5 w-5 flex-none text-gray-400"
+                aria-hidden="true" />
+    </div>
+
+</template>
